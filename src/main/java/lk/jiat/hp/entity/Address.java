@@ -11,13 +11,13 @@ public class Address implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "line_one")
+    @Column
     private String lineOne;
-    @Column(name = "line_two")
+    @Column
     private String lineTwo;
 
     @ManyToOne
-    @JoinColumn(name = "city_id")
+    @JoinColumn
     private City city;
 
     public int getId() {
